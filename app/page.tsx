@@ -183,7 +183,7 @@ export default function Home() {
         </div>
         <div className="videoShell">
           <iframe
-            src="https://www.youtube.com/embed/qbKdY3LzJxk"
+           src="https://www.youtube.com/embed/qbKdY3LzJxk?cc_load_policy=0"
             title="ADEM Functional MVP video"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
