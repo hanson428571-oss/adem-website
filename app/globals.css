@@ -1,46 +1,174 @@
-:root { --bg:#050814; --panel:#0b1224; --text:#f5f8ff; --muted:#9aa8c7; --line:rgba(130,170,255,.22); --blue:#57a7ff; }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin:0; background: radial-gradient(circle at 25% 0%, #102b66 0%, #050814 38%, #03040a 100%); color:var(--text); font-family: Arial, Helvetica, sans-serif; }
-a { color:inherit; text-decoration:none; }
-.hero { min-height: 92vh; padding: 28px 6vw 72px; border-bottom:1px solid var(--line); }
-.nav { display:flex; justify-content:space-between; align-items:center; gap:24px; }
-.logo { width:260px; max-width:52vw; }
-.navLinks { display:flex; gap:24px; color:var(--muted); font-size:14px; }
-.heroGrid { display:grid; grid-template-columns: 1.1fr .9fr; gap:48px; align-items:center; padding-top:92px; }
-.eyebrow { color:var(--blue); text-transform:uppercase; letter-spacing:.16em; font-size:13px; font-weight:700; }
-h1 { font-size: clamp(44px, 7vw, 88px); line-height:.96; max-width:900px; margin:18px 0; }
-h2 { font-size: clamp(30px, 4vw, 54px); line-height:1.05; margin:10px 0 24px; }
-h3 { font-size:22px; margin:0 0 12px; }
-p { color:var(--muted); line-height:1.7; }
-.lead { font-size:23px; max-width:720px; color:#dbe7ff; }
-.ctaRow { display:flex; flex-wrap:wrap; gap:14px; margin-top:34px; }
-.primary,.secondary { display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:14px 20px; font-weight:700; }
-.primary { background:linear-gradient(90deg,#328cff,#78c9ff); color:#041025; box-shadow:0 0 28px rgba(73,160,255,.38); }
-.secondary { border:1px solid var(--line); color:#dce7ff; }
-.heroCard,.techCard,.stat,.contact { background:rgba(10,18,38,.72); border:1px solid var(--line); box-shadow:0 20px 80px rgba(0,0,0,.28); backdrop-filter: blur(12px); }
-.heroCard { border-radius:28px; padding:34px; }
-.cardTitle { color:white; font-weight:700; margin-top:0; }
-.flow { display:grid; gap:14px; }
-.flow span { display:block; border:1px solid var(--line); background:rgba(255,255,255,.04); padding:18px; border-radius:18px; color:#e9f2ff; }
-.flow b { color:var(--blue); font-size:28px; }
-.section { padding:88px 6vw; max-width:1400px; margin:auto; }
-.stats { display:grid; grid-template-columns: repeat(4,1fr); gap:16px; }
-.stat { border-radius:22px; padding:24px; }
-.stat p { margin:0 0 12px; }
-.stat strong { font-size:24px; }
-.twoCol { display:grid; grid-template-columns: .9fr 1.1fr; gap:44px; }
-.list { display:grid; gap:14px; }
-.listItem { border:1px solid var(--line); border-radius:18px; padding:20px; background:rgba(255,255,255,.04); color:#dce7ff; }
-.techGrid { display:grid; grid-template-columns: repeat(4,1fr); gap:18px; margin-top:30px; }
-.techCard { border-radius:24px; padding:24px; }
-.videoSection { display:grid; grid-template-columns: .8fr 1.2fr; gap:42px; align-items:center; }
-.video { width:100%; border-radius:28px; border:1px solid var(--line); background:black; box-shadow:0 30px 100px rgba(0,0,0,.45); }
-.roadGrid { display:grid; grid-template-columns: repeat(4,1fr); gap:16px; }
-.roadGrid div { border-top:2px solid var(--blue); background:rgba(255,255,255,.04); border-radius:18px; padding:22px; }
-.roadGrid strong { display:block; font-size:28px; margin-bottom:10px; }
-.roadGrid span { color:var(--muted); line-height:1.5; }
-.contact { text-align:center; border-radius:32px; }
-.contact img { width:360px; max-width:80%; background:white; border-radius:14px; margin-bottom:18px; }
-@media (max-width: 900px) { .heroGrid,.twoCol,.videoSection { grid-template-columns:1fr; } .stats,.techGrid,.roadGrid { grid-template-columns:1fr 1fr; } .nav { align-items:flex-start; } }
-@media (max-width: 560px) { .stats,.techGrid,.roadGrid { grid-template-columns:1fr; } .navLinks { display:none; } .hero { padding-top:20px; } }
+    gap: 10px;
+  margin: 30px 0 38px;
+}
+
+.flow span {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(32, 199, 244, 0.36);
+  border-radius: 8px;
+  background: rgba(32, 199, 244, 0.08);
+  color: var(--soft);
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.mediaFrame,
+.wideMedia,
+.videoShell {
+  margin: 0;
+  overflow: hidden;
+  background: var(--panel-strong);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+}
+
+.mediaFrame img,
+.wideMedia img {
+  width: 100%;
+}
+
+.techGrid,
+.modelGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.techCard,
+.modelCard,
+.roadGrid article {
+  padding: 24px;
+}
+
+.techCard p,
+.roadGrid p,
+.videoText p {
+  color: var(--muted);
+}
+
+.wideMedia {
+  margin-top: 22px;
+}
+
+.videoShell iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+
+.statusList {
+  display: grid;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.statusList span {
+  border-left: 3px solid var(--cyan);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 14px;
+  color: var(--soft);
+  font-weight: 800;
+}
+
+.modelGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.modelCard {
+  border: 1px solid rgba(10, 30, 70, 0.12);
+  border-radius: 8px;
+  background: white;
+  color: #061021;
+  box-shadow: 0 18px 48px rgba(16, 31, 56, 0.08);
+}
+
+.modelCard span {
+  color: #0b62df;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.roadGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.roadGrid strong {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--cyan);
+  font-size: 24px;
+}
+
+.investorCard {
+  padding: clamp(20px, 3vw, 30px);
+  text-align: center;
+}
+
+.investorCard img {
+  width: 360px;
+  margin: 0 auto 18px;
+  border-radius: 8px;
+  background: white;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    display: none;
+  }
+
+  .metrics,
+  .flow,
+  .techGrid,
+  .modelGrid,
+  .roadGrid,
+  .thesis,
+  .twoCol,
+  .featureGrid,
+  .videoSection,
+  .investor {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .siteHeader {
+    padding: 12px 16px;
+  }
+
+  .brand img {
+    width: 126px;
+  }
+
+  .navCta {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 86vh;
+    padding: 112px 18px 42px;
+  }
+
+  h1 {
+    font-size: clamp(42px, 14vw, 64px);
+  }
+
+  .ctaRow {
+    flex-direction: column;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+  }
+}
