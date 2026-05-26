@@ -1,5 +1,58 @@
+type Pair = readonly [string, string];
+type Triple = readonly [string, string, string];
 
-const roadmap = [
+const metrics: Pair[] = [
+  ["Stage", "Functional MVP"],
+  ["Entry Market", "Building inspection"],
+  ["Patent Status", "USPTO provisional"],
+  ["Long-Term Layer", "Trusted real-world data"],
+];
+
+const painPoints = [
+  "High-cost manual facade inspection workflows",
+  "Fragmented and non-standardized inspection data",
+  "Limited reuse after each report is delivered",
+  "No trusted record layer for long-term building health",
+];
+
+const tech: Pair[] = [
+  [
+    "AI Inspection Analysis",
+    "Computer vision, thermal analysis, point-cloud workflows, anomaly detection, and building health scoring.",
+  ],
+  [
+    "Triple-in-One Tether System",
+    "Patent-pending ground-to-drone infrastructure for power, data transmission, and task module support.",
+  ],
+  [
+    "Trusted Verification Layer",
+    "Mission logs, operator records, inspection history, and verifiable building health records.",
+  ],
+  [
+    "Self-Improving Infrastructure",
+    "Every inspection compounds into better models, workflows, risk analysis, and city-scale intelligence.",
+  ],
+];
+
+const businessModel: Triple[] = [
+  [
+    "Phase 1",
+    "Smart Inspection Service",
+    "Facade inspection, AI anomaly analysis, building health reports, and maintenance recommendations.",
+  ],
+  [
+    "Phase 2",
+    "Membership Management",
+    "Recurring inspections, historical building records, AI risk analysis, and priority service packages.",
+  ],
+  [
+    "Phase 3",
+    "AI Data Platform",
+    "Building risk models, smart city integrations, infrastructure data services, and cross-site intelligence.",
+  ],
+];
+
+const roadmap: Triple[] = [
   ["2026", "Prototype + Product MVP", "Complete Product MVP, build early AI recognition capability, and validate the system workflow."],
   ["2027", "Pilot validation", "Run field pilots, establish customer cases, accumulate data, and improve model stability."],
   ["2028", "AI platform", "Expand membership revenue, launch AI analysis platform capabilities, and scale into more cities."],
