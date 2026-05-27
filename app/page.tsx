@@ -79,7 +79,6 @@ export default function Home() {
       </header>
 
       <section id="top" className="hero">
-        <img className="heroBg" src="/adem-mvp-dashboard.png" alt="" aria-hidden="true" />
         <div className="heroShade" />
         <div className="heroContent">
           <p className="eyebrow">AI & Data Environment Management</p>
@@ -183,7 +182,7 @@ export default function Home() {
         </div>
         <div className="videoShell">
           <iframe
-           src="https://www.youtube.com/embed/qbKdY3LzJxk?cc_load_policy=0"
+            src="https://www.youtube.com/embed/qbKdY3LzJxk?cc_load_policy=0&hl=en"
             title="ADEM Functional MVP video"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
