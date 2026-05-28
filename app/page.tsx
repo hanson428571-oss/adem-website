@@ -231,6 +231,18 @@ export default function Home() {
           <a className="primary" href="mailto:founder@ademtrust.ai?subject=Investor%20inquiry%20for%20ADEM">
             founder@ademtrust.ai
           </a>
+          <div className="founderSocial">
+            <p>Read founder insights on AI industry trends and Physical AI infrastructure.</p>
+            <a
+              className="linkedinLink"
+              href="https://www.linkedin.com/in/hanson-chang-971194ab/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Visit Hanson Chang on LinkedIn"
+            >
+              <img src="/linkedin.webp" alt="LinkedIn" />
+            </a>
+          </div>
         </div>
       </section>
     </main>
