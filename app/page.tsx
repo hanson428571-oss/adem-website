@@ -145,7 +145,7 @@ export default function Home() {
             </p>
           </div>
           <figure className="mediaFrame">
-            <img src="/adem-system-flow.png" alt="ADEM system operation flow" />
+            <img src="/adem-system-flow.png?v=20260531" alt="ADEM system operation flow" />
           </figure>
         </div>
       </section>
@@ -162,7 +162,7 @@ export default function Home() {
           ))}
         </div>
         <figure className="wideMedia">
-          <img src="/adem-3in1-system.png" alt="ADEM triple-in-one tether system" />
+          <img src="/adem-3in1-system.png?v=20260531" alt="ADEM triple-in-one tether system" />
         </figure>
       </section>
 
