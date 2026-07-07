@@ -1,4 +1,4 @@
-import './globals.css';
+﻿import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   description: 'ADEM builds trusted real-world data infrastructure through drone inspection, AI analysis, and verification systems.',
   icons: {
     icon: [
+      { url: '/favicon.png?v=20260707', type: 'image/png' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/adem-logo-dark.png', type: 'image/png' },
     ],
-    shortcut: '/favicon.svg',
-    apple: '/adem-logo-light.png',
+    shortcut: '/favicon.png?v=20260707',
+    apple: '/favicon.png?v=20260707',
   },
   openGraph: {
     title: 'ADEM | Trusted Infrastructure for the Physical AI Era',
@@ -43,3 +43,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
